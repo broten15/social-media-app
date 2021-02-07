@@ -32,14 +32,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'django.contrib.admin',     
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # BOOTSTRAP styling
+    'bootstrap3',
+
     # MY APPS
-    'pic_feed'
+    'pic_feed',
+    'users',
 ]
 
 MIDDLEWARE = [

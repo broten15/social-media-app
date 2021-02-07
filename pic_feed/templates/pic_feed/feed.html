@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'pic_feed/base.html' %}
+
+{% block header %}
+    <h1>This is the feed</h1>
+{% endblock header %}
+
+{% block content %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,22 +16,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-
       }   
       img {
         border: 1px solid #ddd;
         border-radius: 4px;
         padding: 5px;
 
-        max-width: 40%;
+        max-width: 60%;
         height: auto;
       }
     </style>
 </head>
 <body>
   <div class="pic_feed">
-    <h1>This is the feed</h1>
     {% for post in posts %}
       <img src="{{ post.pic.url }}">
       <p>{{ post.description }}</p>
@@ -34,3 +36,4 @@
   </div>
 </body>
 </html>
+{% endblock content %}

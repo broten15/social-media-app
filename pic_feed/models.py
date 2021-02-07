@@ -11,4 +11,4 @@ class Post(models.Model):
 
     def __str__(self):
         """String for representing the Model object."""
-        return "post"
+        return str(self.pic)
