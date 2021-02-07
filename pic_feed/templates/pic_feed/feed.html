@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="feed.css"> -->
+    <style>
+      .pic_feed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+      }   
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+
+        max-width: 40%;
+        height: auto;
+      }
+    </style>
+</head>
+<body>
+  <div class="pic_feed">
+    <h1>This is the feed</h1>
+    {% for post in posts %}
+      <img src="{{ post.pic.url }}">
+      <p>{{ post.description }}</p>
+    {% endfor %}
+  </div>
+</body>
+</html>

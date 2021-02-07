@@ -1,0 +1,4 @@
+make a feed where people can just post pictures with a descripting
+
+add profiles so the content is connected to an account
+
