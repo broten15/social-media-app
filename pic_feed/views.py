@@ -9,5 +9,6 @@ def landing(request):
 def feed(request):
     """View for the feed/home page of the app"""
     posts = Post.objects.all()
+
     context = {'posts': posts}
     return render(request, "pic_feed/feed.html", context)

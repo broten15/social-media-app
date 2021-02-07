@@ -2,8 +2,9 @@ make a feed where people can just post pictures with a descripting**
 
 add profiles so the content is connected to an account**
 
-allow the user to view their posts on the profile pages
+allow the user to view their posts on the profile pages**
     PROFILE VIEW:
-    - name (and picture of them)
-    - bio
+    - name (and picture of them) (DO)
+    - bio                        (DO)
     - their posts
+

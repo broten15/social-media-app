@@ -1,9 +1,11 @@
+from pic_feed.models import Post
 from django.shortcuts import render
 
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 def logout_view(request):
     """Log the user out"""
@@ -29,3 +31,9 @@ def register(request):
     
     context = {'form':form}
     return render(request, 'users/register.html', context)
+
+def profile(request, username):
+    """View for a persons profile"""
+    posts = Post.objects.filter(owner=User.objects.get(username=username))
+    context = {'username': username, 'posts':posts}
+    return render(request, 'users/profile.html', context)

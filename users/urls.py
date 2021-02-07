@@ -1,5 +1,6 @@
 """Defines URL patterns for users"""
 
+from django.conf.urls import url
 from django.urls import re_path
 from django.contrib.auth.views import LoginView
 from django.urls.conf import path
@@ -17,6 +18,7 @@ urlpatterns = [
     path('register/', views.register, name='register'),
 
     # User profile
-    # path('profile/', views.profile, name='profile'),
+    url(r'^(?P<username>\w+)/$', views.profile, name='profile'),
+
 ]
 

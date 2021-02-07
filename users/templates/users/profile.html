@@ -1,7 +1,8 @@
 {% extends 'pic_feed/base.html' %}
+{% load bootstrap3 %}
 
-{% block header %}
-    <h1>This is the feed</h1>
+{% block header %} 
+  <h1>This is the profile page for {{ username }}</h1>
 {% endblock header %}
 
 {% block content %}
@@ -26,11 +27,15 @@
 </head>
 <body>
   <div class="pic_feed">
+
+    <p>(THIS IS THE POSTS THAT THIS PROFILE HAS MADE)</p>
+
     {% for post in posts %}
-      <a href="{% url 'profile' post.owner.username %}">{{ post.owner.username }}</a>
       <img src="{{ post.pic.url }}">
       <p>{{ post.description }}</p>
     {% endfor %}
+    
   </div>
 </body>
+
 {% endblock content %}
