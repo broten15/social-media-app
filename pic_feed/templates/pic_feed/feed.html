@@ -25,6 +25,7 @@
     </style>
 </head>
 <body>
+  <h2><a href="{% url 'create_post' %}">Create Post</a></h2>
   <div class="pic_feed">
     {% for post in posts %}
       <a href="{% url 'profile' post.owner.username %}">{{ post.owner.username }}</a>

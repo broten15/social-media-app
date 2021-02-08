@@ -20,6 +20,7 @@ from . import views
 urlpatterns = [
     path('', views.landing, name='landing'),
     path('feed/', views.feed, name='feed'),
+    path('create-post/', views.create_post, name="create_post"),
 ]
 
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

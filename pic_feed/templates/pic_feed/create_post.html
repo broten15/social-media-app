@@ -1,0 +1,22 @@
+{% extends "pic_feed/base.html" %}
+{% load bootstrap3 %}
+
+{% block header %}
+  <h2>Create Post:</h2>
+{% endblock header %}
+
+{% block content %}
+  
+  <form action="{% url 'create_post' %}" method="post"
+      class="form" enctype="multipart/form-data">
+    
+    {% csrf_token %}
+    {% bootstrap_form form %}
+ 
+    {% buttons %}
+      <button name="submit" class="btn btn-primary">Post</button>
+    {% endbuttons %}
+
+  </form>
+
+{% endblock content %}

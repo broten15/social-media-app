@@ -4,7 +4,9 @@ add profiles so the content is connected to an account**
 
 allow the user to view their posts on the profile pages**
     PROFILE VIEW:
-    - name (and picture of them) (DO)
-    - bio                        (DO)
+    - name (and picture of them)                                        (DO)
+    - bio                                                               (DO)
     - their posts
 
+user need to be able to delete and add posts
+    
